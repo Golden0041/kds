@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 import subprocess
+import os.path
 
 def is_installed():
     # TODO: add checker code
-    return True
+    return(os.path.exists(os.getenv("APPDATA") + "/Microsoft/Windows/Start Menu/Programs/Startup/kds"))
 
 def install():
     # TODO: add install code
-    print("hi")
+    print("Installing...")
 
 def uninstall():
     # TODO: add uninstall code
-    print("hi")
+    print("Uninstalling...")
 
 def update():
     # TODO: add update code
-    subprocess.call(["git", "clone", "https://github.com/Golden0041/Python.git"])
+    subprocess.call(["git", "pull"])
 
 def run():
     # TODO: add run code
@@ -29,3 +30,4 @@ else:
 
 
 # subprocess.call(["wget/bin/wget", "--no-check-certificate" "ScriptFile"])
+# %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
